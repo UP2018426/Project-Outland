@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class MapGenerator : MonoBehaviour
 {
+    public static MapGenerator instance;
+    
     public enum DrawMode
     {
         noiseMap,
@@ -33,10 +35,22 @@ public class MapGenerator : MonoBehaviour
     public int textureResolution = 1024;
     private float[,] falloffMap;
 
-    /*private void Awake()
+    private void Awake()
     {
-        falloffMap = FalloffGenerator.GenerateFalloffMap(mapChunkSize);
-    }*/
+        if (instance != null)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        instance = this;
+    }
+
+    private void Start()
+    {
+        //GenerateMap();
+        //GameManager.instance.SpawnBoat();
+        //falloffMap = FalloffGenerator.GenerateFalloffMap(mapChunkSize);
+    }
 
     public void GenerateMap()
     {
