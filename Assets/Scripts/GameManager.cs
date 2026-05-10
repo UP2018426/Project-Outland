@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        MapGenerator.instance.GenerateMap();
+        MapGenerator.instance.GenerateMap(Random.Range(int.MinValue, int.MaxValue));
         
         SpawnBoat();
 

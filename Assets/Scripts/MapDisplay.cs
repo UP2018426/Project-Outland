@@ -13,9 +13,9 @@ public class MapDisplay : MonoBehaviour
         textureRenderer.transform.localScale = new Vector3(texture.width, 1, texture.height);
     }
 
-    public void DrawSmoothTexture(float[,] noiseMap, TerrainType[] regions, int textureResolution, float blendAmount)
+    public void DrawSmoothTexture(float[,] noiseMap, float[,] biomeMap, RegionSO[] regions, int textureResolution, float blendAmount)
     {
-        Texture2D biomeTexture = TextureGenerator.GenerateBiomeTexture(noiseMap, regions, textureResolution, blendAmount);
+        Texture2D biomeTexture = TextureGenerator.GenerateBiomeTexture(noiseMap, biomeMap, regions, blendAmount, textureResolution);
 
         meshRenderer.sharedMaterial.mainTexture = biomeTexture;
     }

@@ -23,11 +23,11 @@ MonoBehaviour:
     height: 0.32
     colour: {r: 0.3492387, g: 1, b: 0.25, a: 1}
   - name: HighGrass
-    height: 0.8
+    height: 0.648
     colour: {r: 0.3187426, g: 0.5849056, b: 0.27865788, a: 1}
   - name: Grey
-    height: 0.84
+    height: 0.807
     colour: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
   - name: Snow
-    height: 0.85
+    height: 0.938
     colour: {r: 1, g: 1, b: 1, a: 1}
